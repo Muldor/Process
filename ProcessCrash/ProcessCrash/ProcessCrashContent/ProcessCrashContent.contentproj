@@ -110,15 +110,89 @@
       <Name>Map1</Name>
     </None>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Compile Include="Map\Tiles\Meu_Cir_Ver.png">
-      <Name>Meu_Cir_Ver</Name>
+    <Compile Include="Map\Tiles\b.png">
+      <Name>b</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Map\Tiles\Pla_Slo_m.png">
-      <Name>Pla_Slo_m</Name>
+    <Compile Include="Map\Tiles\c.png">
+      <Name>c</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\d.png">
+      <Name>d</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\h.png">
+      <Name>h</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\k.png">
+      <Name>k</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\l.png">
+      <Name>l</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\m.png">
+      <Name>m</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\n.png">
+      <Name>n</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\o.png">
+      <Name>o</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\p.png">
+      <Name>p</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\q.png">
+      <Name>q</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\s.png">
+      <Name>s</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\u.png">
+      <Name>u</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\v.png">
+      <Name>v</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\x.png">
+      <Name>x</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\y.png">
+      <Name>y</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Map\Tiles\z.png">
+      <Name>z</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

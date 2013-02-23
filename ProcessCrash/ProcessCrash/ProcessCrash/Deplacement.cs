@@ -73,6 +73,32 @@ namespace ProcessCrash
             }
         }
 
+       /* public void gravite()
+        {
+            
+            int g = 10, h = 600 - 64;
+            float hero_origin, hero_vitesse = 0;
+            bool saut_en_cours = false;
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Up) && !saut_en_cours )
+            {
+                saut_en_cours = true;
+                hero_origin = hero.position.X;
+                while (h >= hero_origin - 128)
+                {
+                    hero.position.Y = (hero_vitesse * hero_vitesse) / (2 * g);
+                    hero_vitesse--;
+                }
+                while (hero.position.Y < hero_origin)
+                {
+                    hero.position.Y = (hero_vitesse * hero_vitesse) / (2 * g);
+                    hero_vitesse++;
+                }
+            }
+            saut_en_cours = false;
+            
+        }*/
+
         private bool Collision(Vector2 position, bool surX)
         {
             int tix = (int)(position.X / 64);

@@ -13,7 +13,7 @@ namespace ProcessCrash
         KeyboardState oldState;
         KeyboardState newState;
         int compteur, difficulte;
-        bool option, fullscreen, exit;
+        bool option, fullscreen, exit, en_jeu = false;
         public Menu()
         {
             
@@ -38,6 +38,12 @@ namespace ProcessCrash
         {
             return difficulte;
         }
+
+        public bool GetGame()
+        {
+            return en_jeu;
+        }
+
         public int Men(int compte, bool opt, bool screen)
         {
             compteur = compte;
@@ -61,7 +67,10 @@ namespace ProcessCrash
             Deplacement();
             if (compteur == 2 && newState.IsKeyDown(Keys.Enter))
             {
-
+                if (!oldState.IsKeyDown(Keys.Enter))
+                {
+                    en_jeu = true;
+                }
             }
             else if (compteur == 1 && newState.IsKeyDown(Keys.Enter))
             {
