@@ -19,7 +19,7 @@ namespace ProcessCrash
 
         public Deplacement()
         {
-            tab_in = Getcol();
+          //  tab_in = Getcol();
             vit = this.GetVit();
             position = this.GetPos();
             etatclavier = Keyboard.GetState();
@@ -77,7 +77,7 @@ namespace ProcessCrash
         {
             int tix = (int)(position.X / 64);
             int tiy = (int)(position.Y / 64);
-            if (tab_bin[tix,tiy] == 1)
+          //  if (tab_bin[tix,tiy] == 1)
             {
                 return false;
             }

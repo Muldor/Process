@@ -10,70 +10,145 @@ namespace ProcessCrash
 {
     class Menu : Game1
     {
-
-        int compteur = 2;
-        Vector2 haut, milieu, bas;
-
+        KeyboardState oldState;
+        KeyboardState newState;
+        int compteur, difficulte;
+        bool option, fullscreen, exit;
         public Menu()
         {
             
         }
 
-        public void MajorMenu()
+        public bool GetOption()
         {
-            if (compteur == 2)
-            {
+            return option;
+        }
 
-            }
-            else if (compteur == 1)
+        public bool GetScreen()
+        {
+            return fullscreen;
+        }
+
+        public bool GetOut()
+        {
+            return exit;
+        }
+
+        public int GetDiff()
+        {
+            return difficulte;
+        }
+        public int Men(int compte, bool opt, bool screen)
+        {
+            compteur = compte;
+            fullscreen = screen;
+            option = opt;
+            newState = Keyboard.GetState();
+            if (option)
             {
-                compteur = 2;
                 OptionMenu();
             }
-            else if (compteur == 0)
+            else
+            {
+                MajorMenu();
+            }
+            oldState = newState;
+            return compteur;
+        }
+
+        public void MajorMenu( )
+        {
+            Deplacement();
+            if (compteur == 2 && newState.IsKeyDown(Keys.Enter))
             {
 
+            }
+            else if (compteur == 1 && newState.IsKeyDown(Keys.Enter))
+            {
+                if (!oldState.IsKeyDown(Keys.Enter))
+                {
+                    option = true;
+                    compteur = 2;
+                }
+            }
+            else if (compteur == 0 && newState.IsKeyDown(Keys.Enter))
+            {
+                if (!oldState.IsKeyDown(Keys.Enter))
+                {
+                    exit = true;
+                }
             }
         }
 
-        public void OptionMenu()
+        public void OptionMenu( )
         {
-            if (compteur == 2)
+            Deplacement();
+            if (compteur == 2 )
             {
+                if (newState.IsKeyDown(Keys.Left) && difficulte >= 0)
+                {
+                    if (!oldState.IsKeyDown(Keys.Left))
+                    {
+                        difficulte--;
+                    }
+                }
+                if (newState.IsKeyDown(Keys.Right) && difficulte < 2)
+                {
+                    if (!oldState.IsKeyDown(Keys.Right))
+                    {
+                        difficulte++;
+                    }
+                }
+            }
+            else if (compteur == 1 && newState.IsKeyDown(Keys.Enter))
+            {
+                if (!oldState.IsKeyDown(Keys.Enter))
+                {
+                    if (fullscreen)
+                    {
+                        
+                        fullscreen = false;
+                    }
+                    if (!fullscreen)
+                    {
+
+                        fullscreen = true;
+                    }
+                }
                 
             }
-            else if(compteur == 1)
+            else if (compteur == 0 && newState.IsKeyDown(Keys.Enter))
             {
-                if (fullscreen & Keyboard.GetState().IsKeyDown(Keys.Enter))
+                if (!fullscreen & !oldState.IsKeyDown(Keys.Enter))
                 {
-                    fullscreen = false;
+                    option = false;
                 }
-                if (!fullscreen & Keyboard.GetState().IsKeyDown(Keys.Enter))
-                {
-                    fullscreen = true;
-                }
-            }
-            else if (compteur == 0)
-            {
-                
             }
         }
 
         private void Deplacement()
         {
-            if (Keyboard.GetState().IsKeyDown(Keys.Up))
+            
+            if (newState.IsKeyDown(Keys.Up))
             {
-                compteur--;
-                if (compteur < 0)
+                if (!oldState.IsKeyDown(Keys.Up))
                 {
-                    compteur = 2;
+                    compteur++;
+                    compteur %= 3;
                 }
             }
-            if (Keyboard.GetState().IsKeyDown(Keys.Down))
+            if (newState.IsKeyDown(Keys.Down))
             {
-                compteur++;
-                compteur %= 3;
-            }          
+                if (!oldState.IsKeyDown(Keys.Down))
+                {
+                    compteur--;
+                    if (compteur < 0)
+                    {
+                        compteur = 2;
+                    }
+                }
+            }
+            
         }
     }
 }

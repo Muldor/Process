@@ -5,7 +5,7 @@ using System.Text;
 using Microsoft.Xna.Framework;
 namespace ProcessCrash
 {
-    public class Personnage : Map
+    public class Personnage
     {
 
         private Vector2 position;
